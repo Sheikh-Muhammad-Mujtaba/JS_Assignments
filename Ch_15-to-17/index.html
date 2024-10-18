@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  </head>
+  <body>
+    <h1>JS chapter 15 16 17</h1>
+
+    <p>Java-script assignments chapter 15 16 17
+
+    </p>
+    <ol>
+      <li>Create an empty array with the name is courses. ```example: var courses=[] ``</li>
+
+      <li>Get the 5-course name from the user, example: var course1 =prompt("course 1", "computer")  and save all 5 value in "courses" array. example: courses.push(course1)</li>
+
+      <li>print courses array in alertexample: alert(courses)</li>
+
+      <li>print all full 5-course name one by one in prompt. example: course1=prompt(course1, course1Value)</li>
+      <li>If the user edit any value (through prompt), then that value is edit in the array. example: course1=prompt(course1, course1ValueEdit)  use Array.splice() to replace and edit index in array</li>
+      <li>print courses array in alertexample: alert(courses)</li>
+    </ol>
+    <h2>Code</h2>
+    <pre>
+        <code class="language-javascript">
+
+          //  An empty array to hold the course names
+          var courses = []
+          
+          // Get 5 course names from the user
+          var course1 = prompt("course 1", "Excel");
+          courses.push(course1);
+          var course2 = prompt("course 2", "AI");
+          courses.push(course2);
+          var course3 = prompt("course 3", "SEO");
+          courses.push(course3);
+          var course4 = prompt("course 4", "Programming");
+          courses.push(course4);
+          var course5 = prompt("course 5", "Graphic Designing");
+          courses.push(course5);
+          
+          
+          // Print the entire courses array
+          alert(`Courses: ${courses.join(', ')}`);
+          
+          // Prompt the user to edit the course name
+          var editedCourse = prompt(`Edit Course 1 (Current: ${courses[0]}):`, courses[0]);
+          if (editedCourse !== null && editedCourse !== "") {
+              courses.splice(0, 1, editedCourse);
+          }
+          
+          var editedCourse = prompt(`Edit Course 2 (Current: ${courses[1]}):`, courses[1]);
+          if (editedCourse !== null && editedCourse !== "") {
+              courses.splice(1, 1, editedCourse);
+          }
+          
+          var editedCourse = prompt(`Edit Course 3 (Current: ${courses[2]}):`, courses[2]);
+          if (editedCourse !== null && editedCourse !== "") {
+              courses.splice(2, 1, editedCourse);
+          }
+          
+          var editedCourse = prompt(`Edit Course 4 (Current: ${courses[3]}):`, courses[3]);
+          if (editedCourse !== null && editedCourse !== "") {
+              courses.splice(3, 1, editedCourse);
+          }
+          
+          var editedCourse = prompt(`Edit Course 5 (Current: ${courses[4]}):`, courses[4]);
+          if (editedCourse !== null && editedCourse !== "") {
+              courses.splice(4, 1, editedCourse);
+          }
+          
+          
+          
+          
+          
+          // Print the updated courses array
+          alert(`Updated Courses: ${courses.join(', ')}`);
+          
+        </code>
+        </pre>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

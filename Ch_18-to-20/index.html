@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  </head>
+  <body>
+    <h1>JS chapter 18 19 20</h1>
+
+    <p>Java-script assignments chapter 18 19 20</p>
+    <h2>Make a TODO</h2>
+    <p>Customize previous assignment "ch_15_16_17" with for loop...</p>
+    <h2>Code</h2>
+    <pre>
+        <code class="language-javascript">
+
+//  An empty array to hold the course names
+var courses = []
+
+// Get 5 course names from the user
+for (var i = 1; i <= 5; i++) {
+    var course = prompt(`Enter course ${i}:`, `Course ${i}`);
+    courses.push(course);
+}
+
+
+// Print the entire courses array
+alert(`Courses: ${courses.join(', ')}`);
+
+// Prompt the user to edit the course name
+for (var j = 0; j < courses.length; j++) {
+    var editedCourse = prompt(`Edit Course ${j + 1} (Current: ${courses[j]}):`, courses[j]);
+
+    // Check if the user entered a valid course name
+    if (editedCourse !== null && editedCourse !== "") {
+        courses.splice(j, 1, editedCourse); // Replace the old course name with the new one
+    }
+}
+
+
+
+
+// Print the updated courses array
+alert(`Updated Courses: ${courses.join(', ')}`);
+
+        </code>
+        </pre>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
