@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  </head>
+  <body>
+    <h1>JS chapter 35 to 38</h1>
+
+    <p>Java-script assignments chapter 35 to 38</p>
+    <ol>
+      <li>
+        input value from user in String var inputValue="cloUd naTive computinG"
+      </li>
+      <li>
+        Convert every first letter of the content in Capitalize case.
+        inputValue="Cloud Native Computing" use Function
+      </li>
+      <li>
+        print value in console.log() console.log(inputValue) | check result in
+        browser console
+      </li>
+    </ol>
+
+    <pre>
+        <code class="language-javascript">
+
+          var inputValue = prompt("Enter a sentence:", "cloUd naTive computinG");
+
+          function capitalizeWords(inputValue) {
+              return inputValue
+                  .split(" ") // Split the string into an array of words
+                  .map(function (word) {
+                      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase(); // Capitalize first letter and make the rest lowercase
+                  })
+                  .join(" ");
+          }
+          
+          const capitalizedValue = capitalizeWords(inputValue);
+          console.log(capitalizedValue);    
+  </code>
+        </pre>
+
+    <h2>Second Assignment</h2>
+    <ol>
+      <li>User input value in Number through prompt Example value=5</li>
+      <li>Factorialize a Number use Function</li>
+      <li>
+        print value in console.log() console.log(value); the result is 120
+      </li>
+    </ol>
+    <pre>
+          <code class="language-javascript">
+
+            function factorialize(num) {
+              // if the number is 0 or 1, the factorial is 1
+              if (num === 0 || num === 1) {
+                  return 1;
+              }
+          
+              //  multiply the number by the factorial of the previous number
+              return num * factorialize(num - 1);
+          }
+          
+          // Get user input as a number
+          const userInput = parseInt(prompt("Enter a number to factorialize:"), 10);
+          
+          // Call the factorialize function and store the result
+          const result = factorialize(userInput);
+          
+          // Print the result in the console
+          console.log(result);
+              </code>
+          </pre>
+
+    <h2>Understand this logic</h2>
+    <pre>
+      <code class="language-javascript">
+
+        // Call the multiply function with arguments 4, 3, and 6.
+        // The result of this function call will be stored in the variable 'value'.
+        var value = multiply(4, 3, 6);
+        
+        // Output the value of 'value' to the console. 
+        // Since the result of the multiply function is 36, the output will be: value 36
+        console.log("value", value); // The result is 36
+        
+        // Function to add two numbers 'a' and 'b'
+        function add(a, b) {
+          // Calculate the sum of 'a' and 'b' and store it in the variable 'z'
+          var z = a + b;
+          // Return the value of 'z' (the sum)
+          return z;
+        }
+        
+        // Function to multiply 'a' with the sum of 'b' and 'c'
+        function multiply(a, b, c) {
+          // Call the add function with 'b' and 'c', then multiply 'a' by the result.
+          // The result of add(b, c) is 9, so this becomes 4 * 9 = 36.
+          var z = a * add(b, c);
+          // Return the calculated result (36)
+          return z;
+        }
+        
+        // Output the value of 'course' to the console.
+        // Since the 'course' variable is properly initialized, the output will be: course cloud native computing
+        console.log("course", course); // The result is cloud native computing
+        
+        // Attempt to output the value of 'z' to the console.
+        // This will throw a ReferenceError because 'z' is not defined in the global scope.
+        // 'z' is only defined inside the add() and multiply() functions, making it inaccessible here.
+        console.log("z", z); // The result is a ReferenceError: 'z' is not defined
+        
+        // Declare and initialize the variable 'course' with the string "cloud native computing"
+        var course = "cloud native computing";
+        
+
+  </code>
+</pre>
+    <script src="./script.js"></script>
+  </body>
+</html>

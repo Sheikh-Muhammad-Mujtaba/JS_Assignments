@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  </head>
+  <body>
+    <h1>JS chapter 39 to 42</h1>
+
+    <p>Java-script assignments chapter 39 to 42</p>
+
+    <h2>Make a Percentage Calculator</h2>
+
+    <ol>
+      <li>
+        Get the 5-course number from the userfor example course1 is 70 var
+        totalMarks = 500
+      </li>
+      <li>
+        Calculate the total percentage formula: obtainedMarks * 100/ totalMarks
+      </li>
+
+      <li>
+        Calculate the grade use switch case Grade A+ 90% to 100% , Grade A 75%
+        to 89% , Grade B 60% to 74% , Grade C 45% to 60% , Grade D 30% to 44%
+        Grade F 0% to 29%
+      </li>
+      <li>print output in alert.</li>
+    </ol>
+
+    <pre>
+        <code class="language-javascript">
+
+          // Get marks for 5 courses from the user
+          var course1 = parseFloat(prompt("Enter marks for Course 1 (out of 100):"));
+          var course2 = parseFloat(prompt("Enter marks for Course 2 (out of 100):"));
+          var course3 = parseFloat(prompt("Enter marks for Course 3 (out of 100):"));
+          var course4 = parseFloat(prompt("Enter marks for Course 4 (out of 100):"));
+          var course5 = parseFloat(prompt("Enter marks for Course 5 (out of 100):"));
+          
+          // Calculate total obtained marks
+          var obtainedMarks = course1 + course2 + course3 + course4 + course5;
+          var totalMarks = 500; // Maximum possible marks
+          
+          // Calculate percentage
+          var percentage = (obtainedMarks * 100) / totalMarks;
+          
+          // Initialize grade variable
+          var grade;
+          
+          // Determine grade using switch case
+          switch (true) {
+            case (percentage >= 90 && percentage <= 100):
+              grade = "A+";
+              break;
+            case (percentage >= 75 && percentage < 90):
+              grade = "A";
+              break;
+            case (percentage >= 60 && percentage < 75):
+              grade = "B";
+              break;
+            case (percentage >= 45 && percentage < 60):
+              grade = "C";
+              break;
+            case (percentage >= 30 && percentage < 45):
+              grade = "D";
+              break;
+            case (percentage >= 0 && percentage < 30):
+              grade = "F";
+              break;
+            default:
+              grade = "Invalid percentage";
+          }
+          
+          // Display the results using alert
+          alert(
+            "Obtained Marks: " + obtainedMarks + "\n" +
+            "Percentage: " + percentage.toFixed(2) + "%" + "\n" +
+            "Grade: " + grade
+          );
+              
+  </code>
+        </pre>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
